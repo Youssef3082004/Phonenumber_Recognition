@@ -54,7 +54,7 @@ def main(page:Page):
         leading_width=200,
         color="white",
         bgcolor= "#1cb5e0",
-        actions=[IconButton(icon=icons.LOGOUT_ROUNDED,icon_color="white",on_click=lambda _:page.window.destroy())])
+        actions=[IconButton(icon=Icons.LOGOUT_ROUNDED,icon_color="white",on_click=lambda _:page.window.destroy())])
                  
     #! ========================================= Container ==================================================
     #* ========================================= textFeild ==================================================
@@ -64,7 +64,7 @@ def main(page:Page):
         error_style=TextStyle(size=10,weight=FontWeight.W_400),
         label="Phone Number",
         label_style=TextStyle(color="black"),
-        prefix_icon=icons.PHONE_ANDROID,
+        prefix_icon=Icons.PHONE_ANDROID,
         input_filter=InputFilter(regex_string=r"[0-9]"),
         prefix_text="+",
         prefix_style=TextStyle(color="black"),
@@ -77,20 +77,20 @@ def main(page:Page):
     phone_number_row = Row(controls=[phone_number],alignment=MainAxisAlignment.CENTER,tight=False,wrap=False)
     
     #* ========================================= Buttons ==================================================
-    search_button = ElevatedButton(icon=icons.SEARCH_ROUNDED,text="Search",disabled=True,on_click=search)
-    clear_button = ElevatedButton(icon=icons.CLEAR_ALL_ROUNDED,text="Clear",on_click=claer)
+    search_button = ElevatedButton(icon=Icons.SEARCH_ROUNDED,text="Search",disabled=True,on_click=search)
+    clear_button = ElevatedButton(icon=Icons.CLEAR_ALL_ROUNDED,text="Clear",on_click=claer)
     Bottons_row = Row(controls=[search_button,clear_button],alignment=MainAxisAlignment.CENTER,tight=False,wrap=False,spacing=60)
     
     #* ========================================= Text ==================================================
-    country_icon = Icon(icons.LOCATION_ON,color="White",opacity=0,animate_opacity=300)
+    country_icon = Icon(Icons.LOCATION_ON,color="White",opacity=0,animate_opacity=300)
     country_text = Text(value="",color="white",style=TextStyle(weight=FontWeight.BOLD,size=20),opacity=1,animate_opacity=300)
     country_row = Row(controls=[country_icon,country_text],alignment=MainAxisAlignment.CENTER)
     
-    company_icon = Icon(icons.CALL_MADE,color="White",opacity=0,animate_opacity=300)
+    company_icon = Icon(Icons.CALL_MADE,color="White",opacity=0,animate_opacity=300)
     company_text = Text(value="",color="white",style=TextStyle(weight=FontWeight.BOLD,size=20),opacity=1,animate_opacity=300)
     company_row = Row(controls=[company_icon,company_text],alignment=MainAxisAlignment.CENTER)
     
-    city_icon = Icon(icons.LOCATION_CITY,color="White",opacity=0,animate_opacity=300)
+    city_icon = Icon(Icons.LOCATION_CITY,color="White",opacity=0,animate_opacity=300)
     city_text = Text(value="",color="white",style=TextStyle(weight=FontWeight.BOLD,size=20),opacity=1,animate_opacity=300)
     city_row = Row(controls=[city_icon,city_text],alignment=MainAxisAlignment.CENTER)
     
